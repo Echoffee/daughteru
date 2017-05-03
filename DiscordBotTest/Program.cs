@@ -48,7 +48,7 @@ namespace DiscordBotTest
 
         async public void Answer(Object s, MessageEventArgs e)
         {
-            if (!e.Message.IsAuthor)
+            if (!e.Message.IsAuthor && e.Channel.Name != "general")
             {
                 var r = Parser.ParseString(e.Message.Text);
                 r.Event = e;

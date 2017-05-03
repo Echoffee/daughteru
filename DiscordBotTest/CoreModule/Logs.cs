@@ -12,7 +12,7 @@ namespace DiscordBotTest.CoreModule
         async public static void Log(object s, MessageEventArgs e)
         {
             await Task.Run(() => {
-                Console.WriteLine("MESSAGE from " + e.Message.User.Name + ":" + e.Message.Text);
+                Console.WriteLine(e.Channel.Name + " MESSAGE from " + e.Message.User.Name + ":" + e.Message.Text);
                 if (e.Message.MentionedUsers.Count() > 0)
                 {
                     Console.WriteLine("MentionedUsers :");

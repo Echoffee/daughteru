@@ -17,7 +17,7 @@ namespace DiscordBotTest.ParserModule.Lex
             Split = true;
             LowerCase = true;
 
-            AddToLexem("_botname_", new string[] { Parser.Core.MetaDB.Find(x => x.Key.Equals("bot name")).First().Value });
+            AddToLexem("_botname_", new string[] { Parser.Core.MetaDB.Find(x => x.Key.Equals("bot name")).First().Value, "@" + Parser.Core.MetaDB.Find(x => x.Key.Equals("bot name")).First().Value });
         }
     }
 }

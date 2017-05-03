@@ -36,11 +36,18 @@ namespace DiscordBotTest.ParserModule
 
         public ParserResult ParseString(String s)
         {
-            s = Atom.Parse(s);
-            foreach (var l in LexList)
-                s = l.Parse(s);
+			var ss = new List<ParserItem>();
+			var sstr = s.Split(' ');
+			foreach (var item in sstr)
+			{
+				ss.Add(new ParserItem() { IsParsed = false, Value = item, OriginalValue = item });
+			}
 
-            var result = Syna.Parse(s);
+            var ns = Atom.ParseV2(ss);
+            foreach (var l in LexList)
+                ns = l.ParseV2(ns);
+
+            var result = Syna.ParseV2(ns);
             return result;
         }
     }

@@ -95,6 +95,7 @@
     <Compile Include="ParserModule\Lex\LexReminder.cs" />
     <Compile Include="ParserModule\Lex\LexTime.cs" />
     <Compile Include="ParserModule\Parser.cs" />
+    <Compile Include="ParserModule\ParserItem.cs" />
     <Compile Include="ParserModule\ParserResult.cs" />
     <Compile Include="ParserModule\Syntax\Syna.cs" />
     <Compile Include="Program.cs" />
