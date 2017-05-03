@@ -45,6 +45,7 @@ namespace DiscordBotTest.ParserModule.Lex
 
             //Adv
             AddToLexem("to", new string[] { "en", "vers" });
+			AddToLexem("of", new string[] { "de" });
         }
 
         

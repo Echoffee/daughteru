@@ -26,8 +26,8 @@ namespace DiscordBotTest.ParserModule
             LexList = new List<ALex>();
 
             Atom = (new LexAtom(this));
-            LexList.Add(new LexIdentity(this));
             LexList.Add(new LexMeta(this));
+            LexList.Add(new LexIdentity(this));
             LexList.Add(new LexReminder(this));
             LexList.Add(new LexTime(this));
 

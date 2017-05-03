@@ -17,8 +17,8 @@ namespace DiscordBotTest.ParserModule.Lex
             Split = false;
             LowerCase = true;
 
-            this.Lexem.Add("who be you", "_who_are_you_");
-            this.Lexem.Add("change your name to", "_change_name_to_");
+			AddToLexem("_who_are_you_", new string[] { "who be you" });
+			AddToLexem("_change_name_to_", new string[] { "_botname_ change your name to", "_botname_ change of name to" });
         }
     }
 }
